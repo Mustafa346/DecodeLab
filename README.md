@@ -5,7 +5,7 @@
 ![Track](https://img.shields.io/badge/track-Defensive%20Logic-orange.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-Personal repository for my Cybersecurity internship at **DecodeLabs** — Junior Analyst // Defensive Logic track, Batch 2026. This repo collects every task and project I complete during the program, each in its own folder with full source code, documentation, and a technical report.
+Personal repository for my Cybersecurity internship at **DecodeLabs** Junior Analyst // Defensive Logic track, Batch 2026. This repo collects every task and project I complete during the program, each in its own folder with full source code, documentation, and a technical report.
 
 > 🎓 BS Cyber Security student @ COMSATS University Islamabad
 
