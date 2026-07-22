@@ -16,7 +16,8 @@ Personal repository for my Cybersecurity internship at **DecodeLabs** Junior Ana
 | # | Task | Description | Tech Stack | Status |
 |---|------|-------------|------------|--------|
 | 1 | [Password Strength Checker](./Password-Strength-Checker) | GUI tool evaluating password strength in real time — entropy estimation, leaked-password detection, secure password generator | Python, Tkinter | ✅ Complete |
-| 2 | Hashing & Encryption *(coming soon)* | Secure password hashing pipeline (Argon2id) building on Task 1's validation logic | Python | 🔜 Planned |
+| 2 | Basic Encryption & Decryption | Caesar cipher tool that encrypts and decrypts user text using ASCII shifting and modular arithmetic, displaying both outputs | Python | 🔜 Planned |
+| 3 | Phishing Awareness Analysis | Analysis of sample phishing emails/messages — identifying suspicious links, red flags, and header/domain spoofing indicators | Documentation / Analysis | 🔜 Planned |
 
 *(This table will grow as new tasks are added — each row links straight to that task's folder.)*
 
