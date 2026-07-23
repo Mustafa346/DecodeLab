@@ -5,13 +5,13 @@
 ![GUI](https://img.shields.io/badge/GUI-Tkinter-orange.svg)
 ![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg)
 
-A desktop GUI tool built with Python's Tkinter that implements three classical ciphers, then goes a step further by demonstrating *why* the simplest of them can be broken — with a live frequency-analysis chart and an automatic brute-force cracker.
+A desktop GUI tool built with Python's Tkinter that implements three classical ciphers, then goes a step further by demonstrating *why* the simplest of them can be broken with a live frequency-analysis chart and an automatic brute-force cracker.
 
 > **Project 2**
 > Track: Junior Analyst // Defensive Logic Data Confidentiality
 
 <p align="center">
-  <img src="assets/screenshot_main.png" alt="Encryption & Decryption Toolkit — main tab" width="420">
+  <img src="assets/screenshot_main.png" alt="Encryption & Decryption Toolkit main tab" width="420">
 </p>
 
 ---
@@ -21,14 +21,14 @@ A desktop GUI tool built with Python's Tkinter that implements three classical c
 | Feature | Description |
 |---|---|
 | **Caesar Cipher** | Classic shift cipher with a user-selectable key (0–25), not hardcoded |
-| **Vigenère Cipher** | Polyalphabetic cipher using a keyword — a stronger evolution of Caesar |
+| **Vigenère Cipher** | Polyalphabetic cipher using a keyword a stronger evolution of Caesar |
 | **Atbash Cipher** | Mirror-alphabet substitution (A↔Z, B↔Y…), self-inverse, no key needed |
 | **Encrypt & Decrypt, side by side** | Input and result are always shown together, exactly as the brief requires |
-| **Frequency Analysis panel** | Live bar chart comparing your text's letter frequency against typical English — visualizes *why* Caesar-shifted text is still crackable |
+| **Frequency Analysis panel** | Live bar chart comparing your text's letter frequency against typical English visualizes *why* Caesar-shifted text is still crackable |
 | **Brute Force panel** | Automatically tries all 26 Caesar shifts and ranks them by English-likeness, demonstrating the "tiny key space" vulnerability |
 | **Swap / Copy / Clear** | Quality-of-life tools for chaining operations and grabbing results |
 | **Edge-case safe** | Spaces, punctuation, digits, and case are all preserved correctly |
-| **No external dependencies** | Pure Python standard library — nothing to `pip install` |
+| **No external dependencies** | Pure Python standard library nothing to `pip install` |
 
 <p align="center">
   <img src="assets/screenshot_frequency.png" alt="Frequency Analysis tab" width="410">
@@ -42,7 +42,7 @@ A desktop GUI tool built with Python's Tkinter that implements three classical c
 - Python **3.8+**
 - Tkinter (usually bundled with Python; see [Troubleshooting](#-troubleshooting) if missing)
 
-No third-party packages required — the entire app runs on the standard library (`tkinter`, `collections`, `re`).
+No third-party packages required the entire app runs on the standard library (`tkinter`, `collections`, `re`).
 
 ---
 
@@ -60,16 +60,16 @@ A window titled **"Encryption & Decryption Toolkit"** opens with three tabs: Enc
 
 ### Encrypt / Decrypt tab
 1. Choose a cipher from the dropdown: **Caesar**, **Vigenère**, or **Atbash**.
-2. Enter the key — a number (0–25) for Caesar, a word for Vigenère, or nothing for Atbash.
+2. Enter the key a number (0–25) for Caesar, a word for Vigenère, or nothing for Atbash.
 3. Type or paste your text into **Input Text**.
 4. Click **🔒 Encrypt** or **🔓 Decrypt**. The result appears in the **Result** box below.
 5. Use **⇄ Swap** to move the result back into the input (handy for verifying a round-trip), **📋 Copy Result** to grab it, or **🗑 Clear** to reset both boxes.
 
 ### Frequency Analysis tab
-Click **Analyze Input Text** or **Analyze Result Text** to draw a bar chart comparing your text's letter frequency (blue bars) against typical English letter frequency (grey bars). Because Caesar simply *shifts* every letter by the same amount, the shape of the distribution stays identical — just rotated. This is exactly what lets an attacker recover the shift without ever knowing the key.
+Click **Analyze Input Text** or **Analyze Result Text** to draw a bar chart comparing your text's letter frequency (blue bars) against typical English letter frequency (grey bars). Because Caesar simply *shifts* every letter by the same amount, the shape of the distribution stays identical just rotated. This is exactly what lets an attacker recover the shift without ever knowing the key.
 
 ### Brute Force tab
-Paste any Caesar-encrypted text (or click **Use Result Text** to pull it from the main tab) and click **🕵️ Crack It**. All 26 possible shifts are tried and listed, ranked by how many common English words each decrypted candidate contains — the most likely correct answer is highlighted at the top.
+Paste any Caesar-encrypted text (or click **Use Result Text** to pull it from the main tab) and click **🕵️ Crack It**. All 26 possible shifts are tried and listed, ranked by how many common English words each decrypted candidate contains the most likely correct answer is highlighted at the top.
 
 ---
 
@@ -87,7 +87,7 @@ Text is converted to numbers with `ord()`, shifted with modular arithmetic so th
 | Cipher | Key type | How it differs |
 |---|---|---|
 | **Caesar** | Single number (0–25) | Every letter shifted by the same fixed amount |
-| **Vigenère** | Word/phrase | Shift amount changes per letter, cycling through the keyword's letters — defeats simple frequency analysis |
+| **Vigenère** | Word/phrase | Shift amount changes per letter, cycling through the keyword's letters defeats simple frequency analysis |
 | **Atbash** | None | Fixed mirror substitution; mathematically a Caesar-like reflection rather than a shift |
 
 **Why Caesar is a "lockbox, not a vault":** it has only 26 possible keys (a *tiny key space*, instantly brute-forceable) and it preserves the letter-frequency *pattern* of the original language (just shifted), which is exactly what the Frequency Analysis and Brute Force tabs in this app are built to demonstrate.
@@ -141,9 +141,9 @@ print('Top brute-force guess:', brute_force_caesar(ct)[0])
 
 ## ⚠️ Scope & Limitations
 
-- These are **classical, educational ciphers** — Caesar, Vigenère, and Atbash are all breakable with enough ciphertext and are not suitable for real-world data protection.
-- Real-world confidentiality requires modern authenticated encryption (e.g. AES-256-GCM) with securely generated and stored keys — out of scope for this project, which focuses on the underlying logic of encryption/decryption and detection of weak schemes.
-- The Vigenère implementation here only advances the keyword index on alphabetic characters, so spaces/punctuation don't consume a key position — a deliberate design choice to keep the ciphertext's non-letter structure identical to the plaintext's.
+- These are **classical, educational ciphers** Caesar, Vigenère, and Atbash are all breakable with enough ciphertext and are not suitable for real-world data protection.
+- Real-world confidentiality requires modern authenticated encryption (e.g. AES-256-GCM) with securely generated and stored keys out of scope for this project, which focuses on the underlying logic of encryption/decryption and detection of weak schemes.
+- The Vigenère implementation here only advances the keyword index on alphabetic characters, so spaces/punctuation don't consume a key position a deliberate design choice to keep the ciphertext's non-letter structure identical to the plaintext's.
 
 ---
 
