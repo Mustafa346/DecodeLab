@@ -15,11 +15,11 @@ Personal repository for my Cybersecurity internship at **DecodeLabs** Junior Ana
 
 | # | Task | Description | Tech Stack | Status |
 |---|------|-------------|------------|--------|
-| 1 | [Password Strength Checker](./Password-Strength-Checker) | GUI tool evaluating password strength in real time — entropy estimation, leaked-password detection, secure password generator | Python, Tkinter | ✅ Complete |
+| 1 | [Password Strength Checker](./Password-Strength-Checker) | GUI tool evaluating password strength in real time entropy estimation, leaked-password detection, secure password generator | Python, Tkinter | ✅ Complete |
 | 2 | [Encryption & Decryption](./Encryption-Decryption) | Caesar cipher tool that encrypts and decrypts user text using ASCII shifting and modular arithmetic, displaying both outputs | Python | ✅ Complete  |
-| 3 | Phishing Awareness Analysis | Analysis of sample phishing emails/messages identifying suspicious links, red flags, and header/domain spoofing indicators | Documentation / Analysis | ✅ Complete |
+| 3 | [Phishing Awareness Analysis](./Phishing-Awareness-Analysis) | Analysis of sample phishing emails/messages identifying suspicious links, red flags, and header/domain spoofing indicators | Documentation / Analysis | ✅ Complete |
 
-*(This table will grow as new tasks are added — each row links straight to that task's folder.)*
+*(This table will grow as new tasks are added each row links straight to that task's folder.)*
 
 ---
 
@@ -38,7 +38,7 @@ Across tasks in this repo, I'm primarily working with:
 
 ```
 DecodeLab/
-├── README.md                      # This file — overview of all tasks
+├── README.md                      # This file overview of all tasks
 ├── LICENSE                        # MIT License (applies repo-wide)
 ├── .gitignore
 └── Password-Strength-Checker/     # Task 1
@@ -57,7 +57,7 @@ Each task folder is self-contained: its own README explaining the goal, design, 
 
 ## 🎯 About This Internship
 
-DecodeLabs' Industrial Training Kit places interns in the role of a Cybersecurity Analyst, working through progressively deeper defensive-security tasks — starting with core validation logic and building toward hashing, encryption, and broader security engineering practices.
+DecodeLabs' Industrial Training Kit places interns in the role of a Cybersecurity Analyst, working through progressively deeper defensive-security tasks starting with core validation logic and building toward hashing, encryption, and broader security engineering practices.
 
 ---
 
